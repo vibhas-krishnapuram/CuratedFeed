@@ -37,7 +37,7 @@ const Register = () => {
     setError('');
 
     try {
-      await axios.post('http://127.0.0.1:5000/register', formData);
+      await axios.post('https://curatedfeed-backend.onrender.com/register', formData);
       
       // Redirect to login page after successful registration
       navigate('/login');

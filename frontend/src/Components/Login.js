@@ -23,7 +23,7 @@ const Login = () => {
       setError('');
   
       try {
-        const response = await axios.post('http://127.0.0.1:5000/login', formData);
+        const response = await axios.post('https://curatedfeed-backend.onrender.com/login', formData);
         
         // Store the token and topics in localStorage
         localStorage.setItem('token', response.data['access token']);

@@ -1,7 +1,7 @@
 // src/api.js
 import axios from "axios";
 
-const BASE_URL = "http://127.0.0.1:5000/api"; 
+const BASE_URL = "https://curatedfeed-backend.onrender.com/api"; 
 
 // Setup axios interceptor to add the token to all requests
 const setupAuthInterceptor = () => {
@@ -38,7 +38,7 @@ axios.interceptors.response.use(
 
 export const login = async (username, password) => {
   try {
-    const response = await axios.post('http://127.0.0.1:5000/login', {
+    const response = await axios.post('https://curatedfeed-backend.onrender.com/login', {
       username,
       password
     });
@@ -54,7 +54,7 @@ export const login = async (username, password) => {
 
 export const register = async (userData) => {
   try {
-    const response = await axios.post('http://127.0.0.1:5000/register', userData);
+    const response = await axios.post('https://curatedfeed-backend.onrender.com/register', userData);
     return { success: true, data: response.data };
   } catch (error) {
     return { success: false, error: error.response?.data?.message || 'Registration failed' };
@@ -63,7 +63,7 @@ export const register = async (userData) => {
 
 export const updateTopic = async (topic) => {
   try {
-    const response = await axios.post('http://127.0.0.1:5000/update_topic', { topic });
+    const response = await axios.post('https://curatedfeed-backend.onrender.com/update_topic', { topic });
     localStorage.setItem('topics', response.data.topics);
     return { success: true, data: response.data };
   } catch (error) {
