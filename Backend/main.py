@@ -15,8 +15,6 @@ from youtubeAPI import call_videos
 from redditPull import call_reddit
 from googlePull import call_google
 
-## SET ENV VARIABLES ##
-#export GOOGLE_API_KEY="AIzaSyBo2Z5qACZXPvOp0guTyZZ5E5cEqBTUzFo"
 
 app = Flask(__name__)
 CORS(app)
