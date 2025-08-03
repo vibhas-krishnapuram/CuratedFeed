@@ -1,8 +1,6 @@
 from openai import OpenAI
 from flask import jsonify
 
-key = "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"
-
 def AI_Search():
     client = OpenAI(api_key=key)
 
